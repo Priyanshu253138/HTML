@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: linear-gradient(to right, #f5f7fa, #c3cfe2); /* soft gradient background */
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b); /* vibrant gradient */
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700; /* gold on hover */
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #ff7e5f;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        /* About Me Section */
+        #About {
+            background-color: #fefefe;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 40px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        #About p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Services Section */
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, #ffecd2, #fcb69f); /* colorful gradient card */
+            padding: 25px;
+            border-radius: 15px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card h3 {
+            margin-top: 0;
+            color: #ff7e5f;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+        }
+
+        /* Footer Styling (optional but colorful) */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #ff7e5f;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="#About">About Me</a>
+            <a href="#Services">Services</a>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="About">
+        <h2>About Me</h2>
+        <p>Hello! I am a web developer with a passion for creating beautiful and functional websites. I love solving problems and turning ideas into reality through code.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="Services">
+        <div class="services-container">
+            <h2>My Services</h2>
+            <div class="services-cards">
+                <div class="service-card">
+                    <h3>Web Development</h3>
+                    <p>Building responsive, modern, and user-friendly websites tailored to your needs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>UI/UX Design</h3>
+                    <p>Designing intuitive and visually appealing interfaces for the best user experience.</p>
+                </div>
+                <div class="service-card">
+                    <h3>SEO Optimization</h3>
+                    <p>Improving website visibility and search engine ranking to attract more visitors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 My Portfolio. All rights reserved.
+    </footer>
+
+</body>
+</html>
