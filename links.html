@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Links - GovConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Ashoka_Chakra.svg/120px-Ashoka_Chakra.svg.png" alt="Logo" />
+      <h1>GovConnect Portal</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="links.html">Gov Links</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Official Government Websites</h2>
+    <ul id="gov-links"></ul>
+  </main>
+
+  <script>
+    fetch("/api/gov-links")
+      .then(response => response.json())
+      .then(data => {
+        const list = document.getElementById("gov-links");
+        data.forEach(link => {
+          const li = document.createElement("li");
+          li.innerHTML = `<a href="${link.url}" target="_blank">${link.name}</a>`;
+          list.appendChild(li);
+        });
+      })
+      .catch(err => console.error("Error loading links:", err));
+  </script>
+
+  <footer>
+    <p>&copy; 2025 GovConnect. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
